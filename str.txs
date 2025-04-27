@@ -1,0 +1,8 @@
+src /app / components / shared / navbar.jsx and footer.jsx 
+sliders / Slider.jsx; // Image or text carousel
+cards / Cards.jsx; // Card grid for services, features, etc.
+sections / Feedback.jsx; and Partners.jsx; // User reviews/testimonials section
+
+pages / Home.jsx; // Home page where components are used
+App.jsx; // Root component with routing
+index.css; // Tailwind styles

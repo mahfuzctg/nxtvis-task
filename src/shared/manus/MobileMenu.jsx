@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MobileMenu = () => {
   return (
-    <div className="md:hidden bg-white shadow-md">
+    <div className="md:hidden bg-white h-screen">
       <div className="px-4 pt-4 pb-6 flex flex-col space-y-4 text-gray-700 text-base font-medium">
         <Link to="/" className="hover:text-indigo-600 transition">
           Home

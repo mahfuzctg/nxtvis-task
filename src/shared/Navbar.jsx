@@ -7,32 +7,34 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   return (
-    <nav className="bg-white w-full ">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="bg-white w-full shadow-md fixed top-0 left-0 z-50">
+      <div className="max-w-6xl mx-auto px-5 md:px-8 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold text-indigo-600">
-          <Link to="/">NxtVis</Link>
+        <div className="text-2xl font-bold text-indigo-600 tracking-tight">
+          <Link to="/" className="hover:text-indigo-500 transition-colors">
+            NxtVis
+          </Link>
         </div>
 
-        {/* Desktop Menu Links */}
-
-        <div className="hidden md:flex items-center space-x-8 text-gray-700 text-base font-medium">
-          <NavLinks className="hover:text-indigo-600 transition" />
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8 text-gray-700 text-base font-medium">
+          <NavLinks />
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-700 focus:outline-none"
+            className="text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-all"
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -47,7 +49,7 @@ const Navbar = () => {
               </svg>
             ) : (
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -64,8 +66,13 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
       {/* Mobile Menu */}
-      {isMobileMenuOpen && <MobileMenu />}
+      {isMobileMenuOpen && (
+        <div className="md:hidden">
+          <MobileMenu />
+        </div>
+      )}
     </nav>
   );
 };

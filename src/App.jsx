@@ -1,10 +1,14 @@
+import { Outlet, BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
+import Navbar from "./shared/Navbar";
 
 function App() {
   return (
-    <>
-      <h3 className="bg-red-500 text-blue-600">this is nxtvis</h3>
-    </>
+    <Router>
+      {" "}
+      <Navbar />
+      <Outlet />
+    </Router>
   );
 }
 

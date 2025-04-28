@@ -1,24 +1,23 @@
-// src/data/servicesData.js
-
 export const services = [
   {
-    title: "Mint Financial Management",
-    image: "https://images.unsplash.com/photo-1556742049-9083d5cf5dba",
+    title: "AI-Powered Solutions",
+    image:
+      "https://i.postimg.cc/jdxXhw0p/Harnessing-power-of-AI-to-shape-the-future.webp",
     icon: "FaChartLine",
   },
   {
-    title: "Smart Finance Solutions",
-    image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
-    icon: "FaCommentsDollar",
+    title: "Next-Gen Tech Consulting",
+    image: "https://i.postimg.cc/13Lwb425/Infospica-Blog1.webp",
+    icon: "FaClipboardList",
   },
   {
-    title: "New Project Lasting",
-    image: "https://images.unsplash.com/photo-1542744095-291d1f67b221",
+    title: "Future-Ready Digital Transformation",
+    image: "https://i.postimg.cc/Twcby0wp/digital-transformation-1.jpg",
     icon: "FaTrophy",
   },
   {
-    title: "Stan Robinhood Financial",
-    image: "https://images.unsplash.com/photo-1549924231-f129b911e442",
-    icon: "FaClipboardList",
+    title: "Cloud Integration & Optimization",
+    image: "https://i.postimg.cc/90F7y9R1/service-4.webp",
+    icon: "FaCommentsDollar",
   },
 ];

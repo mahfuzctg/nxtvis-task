@@ -42,7 +42,7 @@ const HeroSlider = () => {
                       placeholder="Search here"
                       className="outline-none w-full text-gray-700 px-4 py-2 rounded-full"
                     />
-                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition">
+                    <button className="bg-[#6366F1] hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition">
                       Search
                     </button>
                   </div>

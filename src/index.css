@@ -134,3 +134,16 @@ a:hover {
     font-size: 0.95rem;
   }
 }
+
+/* clipt path for hero sections */
+.clip-hero {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+}

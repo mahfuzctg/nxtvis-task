@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"; // ✅ Upgraded icons
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -12,8 +12,8 @@ const HeroSlider = () => {
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation={{
-          prevEl: ".swiper-button-prev",
-          nextEl: ".swiper-button-next",
+          prevEl: ".custom-swiper-button-prev",
+          nextEl: ".custom-swiper-button-next",
         }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
@@ -25,14 +25,21 @@ const HeroSlider = () => {
               className="w-full h-screen bg-cover bg-center flex items-center justify-center relative"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 bg-black/30"></div>
+
+              {/* Text container with clipped background */}
               <div className="relative z-10 text-center text-white px-4">
-                <h3 className="text-xl md:text-2xl font-signature mb-3">
-                  {slide.title}
-                </h3>
-                <h3 className="text-4xl md:text-6xl font-bold">
-                  {slide.subtitle}
-                </h3>
+                <div className="inline-block relative">
+                  <div className="absolute inset-0 bg-white/90 clip-hero" />
+                  <div className="relative p-4">
+                    <h3 className="text-lg text-[#6366F1] md:text-2xl font-signature mb-2">
+                      {slide.title}
+                    </h3>
+                    <p className="text-3xl md:text-5xl font-bold pb-5">
+                      {slide.subtitle}
+                    </p>
+                  </div>
+                </div>
 
                 {/* Search Bar */}
                 <div className="mt-10">
@@ -53,11 +60,11 @@ const HeroSlider = () => {
         ))}
 
         {/* Custom Navigation Buttons */}
-        <div className="swiper-button-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-green-500 hover:bg-green-500 hover:text-white p-4 rounded-full cursor-pointer transition-all">
-          <FaChevronLeft size={30} />
+        <div className="custom-swiper-button-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-[#6366F1] hover:bg-[#6366F1] hover:text-white p-3 rounded-full shadow-lg cursor-pointer transition-all z-20">
+          <FaArrowAltCircleLeft size={40} />
         </div>
-        <div className="swiper-button-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-green-500 hover:bg-green-500 hover:text-white p-4 rounded-full cursor-pointer transition-all">
-          <FaChevronRight size={30} />
+        <div className="custom-swiper-button-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-[#6366F1] hover:bg-[#6366F1] hover:text-white p-3 rounded-full shadow-lg cursor-pointer transition-all z-20">
+          <FaArrowAltCircleRight size={40} />
         </div>
       </Swiper>
     </div>

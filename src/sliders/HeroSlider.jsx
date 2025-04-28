@@ -1,36 +1,20 @@
 import React from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-const slides = [
-  {
-    id: 1,
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    title: "Discover Your Listing",
-    subtitle: "Let's Discover This Tour",
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    title: "Explore New Destinations",
-    subtitle: "Plan Your Next Journey",
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    title: "Find the Perfect Spot",
-    subtitle: "Make Memories Happen",
-  },
-];
+import { slides } from "../data/slidesData";
 
 const HeroSlider = () => {
   return (
     <div className="relative w-full h-screen">
       <Swiper
         modules={[Navigation, Autoplay]}
-        navigation
+        navigation={{
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
         className="w-full h-full"
@@ -49,28 +33,14 @@ const HeroSlider = () => {
                 <h3 className="text-4xl md:text-6xl font-bold">
                   {slide.subtitle}
                 </h3>
+
                 {/* Search Bar */}
                 <div className="mt-10">
-                  <div className="bg-white rounded-full shadow-lg p-4 flex items-center space-x-4 w-full max-w-4xl mx-auto">
+                  <div className="bg-white rounded-full shadow-lg p-4 flex items-center w-full max-w-xl mx-auto">
                     <input
                       type="text"
-                      placeholder="Location"
-                      className="outline-none w-full text-gray-700"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Activity Type"
-                      className="outline-none w-full text-gray-700"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Date"
-                      className="outline-none w-full text-gray-700"
-                    />
-                    <input
-                      type="number"
-                      placeholder="Traveler"
-                      className="outline-none w-20 text-gray-700"
+                      placeholder="Search here"
+                      className="outline-none w-full text-gray-700 px-4 py-2 rounded-full"
                     />
                     <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition">
                       Search
@@ -81,6 +51,14 @@ const HeroSlider = () => {
             </div>
           </SwiperSlide>
         ))}
+
+        {/* Custom Navigation Buttons */}
+        <div className="swiper-button-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-green-500 hover:bg-green-500 hover:text-white p-4 rounded-full cursor-pointer transition-all">
+          <FaChevronLeft size={30} />
+        </div>
+        <div className="swiper-button-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-green-500 hover:bg-green-500 hover:text-white p-4 rounded-full cursor-pointer transition-all">
+          <FaChevronRight size={30} />
+        </div>
       </Swiper>
     </div>
   );

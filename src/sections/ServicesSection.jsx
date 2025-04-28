@@ -7,6 +7,7 @@ import {
   FaCommentsDollar,
   FaTrophy,
 } from "react-icons/fa";
+import Title from "../reuseables/Title";
 
 const services = [
   {
@@ -35,14 +36,11 @@ const ServicesSection = () => {
   return (
     <section className="bg-gray-100 py-16">
       <div className="text-center mb-12">
-        <p className="text-teal-500 tracking-widest uppercase font-semibold">
-          Our Services
-        </p>
-        <h2 className="text-4xl font-bold mt-4">
-          Invest in your future
-          <br />
-          with us
-        </h2>
+        <Title
+          title="Our Services"
+          subtitle="Invest in your future with us"
+          color="blue-600"
+        />
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">

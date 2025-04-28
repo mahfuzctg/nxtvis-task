@@ -10,7 +10,7 @@
   --primary-color: #4f46e5; /* Main purple */
   --secondary-color: #f97316; /* Accent orange */
   --text-dark: #0f172a;
-  --text-light: #64748b;
+  --text-light: #64748bd9;
   --background-light: #f8fafc;
   --background-dark: #1e293b;
   --button-hover: #6366f1;
@@ -74,7 +74,7 @@ p {
   font-size: 1rem;
   line-height: 0.8;
   color: var(--text-light);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.8rem;
 }
 
 /* Links */

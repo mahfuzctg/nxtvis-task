@@ -3,9 +3,9 @@ import { FaQuoteRight, FaRegStar, FaStar } from "react-icons/fa";
 
 const FeedbackCard = ({ item }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md pt-5 justify-center flex flex-col items-center gap-6 relative w-9/12 md:w-[40%] h-[450px] hover:shadow-lg transition-all duration-300">
-      <div className="relative">
-        <div className="rounded-full border-4 border-gray-100 p-1 relative">
+    <div className="bg-white rounded-xl  pt-6 justify-center flex flex-col items-center gap-6 relative w-9/12 md:w-[40%] h-[450px] hover:shadow-lg transition-all duration-300">
+      <div className="relative ">
+        <div className="rounded-full  -mt-12 border-4 border-gray-100 p-1 relative">
           <img
             src={item.image}
             alt={item.name}
@@ -16,14 +16,14 @@ const FeedbackCard = ({ item }) => {
         </div>
       </div>
       <div className="text-left flex flex-col justify-center items-center h-full">
-        <h4 className="text-lg font-bold text-gray-800">{item.name}</h4>
+        <h3 className="text-lg text-[#6366F1] font-bold ">{item.name}</h3>
         <p className="text-sm text-gray-500">{item.role}</p>
         <p className="text-gray-600 text-sm mt-2 text-center px-4">
           {item.message}
         </p>
 
         {/* Display the star rating */}
-        <div className="flex justify-center mt-2">
+        <div className="flex justify-center ">
           {[...Array(5)].map((_, i) => (
             <span key={i}>
               {i < item.rating ? (

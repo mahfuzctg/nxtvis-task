@@ -34,7 +34,6 @@ const partners = [
 const PartnerSection = () => {
   return (
     <Animation>
-      {" "}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <Title
@@ -47,7 +46,7 @@ const PartnerSection = () => {
             {partners.map((partner) => (
               <div
                 key={partner.id}
-                className="relative w-20 h-20 mx-auto bg-[#6366F1] text-white flex items-center justify-center clip-hexagon shadow-md hover:shadow-xl transition-all"
+                className="relative w-20 h-20 mx-auto bg-[#6366F1] text-white flex items-center justify-center clip-hexagon shadow-md transition-transform duration-300 transform hover:scale-110 hover:shadow-lg hover:rotate-3"
               >
                 <div className="text-white">{partner.icon}</div>
               </div>

@@ -1,6 +1,7 @@
-import { Outlet, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
-import Home from "./pages/home";
+
+import HomePage from "./pages/home/HomePage";
 import Footer from "./shared/Footer";
 import Navbar from "./shared/Navbar";
 
@@ -9,8 +10,7 @@ function App() {
     <Router>
       {" "}
       <Navbar />
-      <Outlet />
-      <Home />
+      <HomePage />
       <Footer />
     </Router>
   );

@@ -1,60 +1,46 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaWhatsapp,
-} from "react-icons/fa";
-import { ClassesList, LinksList } from "./FooterLists"; // 👈 Import lists
+import { FaBolt } from "react-icons/fa"; // Icon (you can replace later if needed)
+import { ClassesList, LinksList } from "./manus/FooterLists";
+import FooterSocials from "./manus/FooterSocials";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white px-6 py-12">
+    <footer className="bg-white text-black px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo & About */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="bg-yellow-400 p-2 rounded-full">
-              <span className="text-black font-bold text-xl">🌀</span>
-            </div>
-            <h3 className="text-2xl font-bold">Collab</h3>
+            <FaBolt className="text-[#6366F1] text-3xl" />
+            <h3 className="text-2xl font-bold text-[#6366F1]">Next Vision</h3>
           </div>
           <p className="text-sm mb-6">
-            Rutrum tellus pellentesque eu tincidunt. Venenatis cras sed felis
-            eget velit aliquet sagittis id consectetur
+            Empowering innovation with future-ready solutions. At Next Vision,
+            we bridge technology and creativity to drive digital transformation.
           </p>
+
           {/* Social Icons */}
-          <div className="flex space-x-4">
-            <a href="#" className="bg-yellow-400 text-black p-2 rounded-full">
-              <FaFacebookF size={16} />
-            </a>
-            <a href="#" className="bg-yellow-400 text-black p-2 rounded-full">
-              <FaInstagram size={16} />
-            </a>
-            <a href="#" className="bg-yellow-400 text-black p-2 rounded-full">
-              <FaTwitter size={16} />
-            </a>
-            <a href="#" className="bg-yellow-400 text-black p-2 rounded-full">
-              <FaWhatsapp size={16} />
-            </a>
-          </div>
+          <FooterSocials />
         </div>
 
-        {/* Links */}
+        {/* Quick Links */}
         <div>
-          <h2 className="text-lg font-bold mb-4">Links</h2>
-          <LinksList /> {/* 🛜 Insert the separated LinksList */}
+          <h2 className="text-lg font-bold mb-4 text-[#6366F1]">Quick Links</h2>
+          <LinksList />
         </div>
 
-        {/* Class */}
+        {/* Solutions */}
         <div>
-          <h2 className="text-lg font-bold mb-4">Class</h2>
-          <ClassesList /> {/* 🛜 Insert the separated ClassesList */}
+          <h2 className="text-lg font-bold mb-4 text-[#6366F1]">
+            Our Solutions
+          </h2>
+          <ClassesList />
         </div>
 
-        {/* Latest Posts */}
+        {/* Insights */}
         <div>
-          <h2 className="text-lg font-bold mb-4">Latest Posts</h2>
+          <h2 className="text-lg font-bold mb-4 text-[#6366F1]">
+            Latest Insights
+          </h2>
           <div className="flex items-start gap-4 mb-6">
             <img
               src="https://i.postimg.cc/DfxSG82p/typesofsoftwareengineering.jpg"
@@ -63,30 +49,17 @@ const Footer = () => {
             />
             <div className="text-sm">
               <p className="font-semibold leading-tight">
-                How to Become a Project Manager in 2022: A Step-by-Step Guide
+                Building the Future: Emerging Technologies That Matter
               </p>
-              <p className="text-xs text-gray-400 mt-1">August 12, 2020</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <img
-              src="https://i.postimg.cc/5NGjPTQw/software-introduction.jpg"
-              alt="Post 2"
-              className="w-14 h-14 object-cover"
-            />
-            <div className="text-sm">
-              <p className="font-semibold leading-tight">
-                How to Become a Web Designer: A Comprehensive Guide
-              </p>
-              <p className="text-xs text-gray-400 mt-1">August 14, 2020</p>
+              <p className="text-xs text-gray-400 mt-1">March 28, 2025</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
-        Merkulove © Collab Template All rights reserved Copyrights 2022
+      <div className="border-t border-gray-300 mt-10 pt-6 text-center text-sm text-gray-600">
+        © {new Date().getFullYear()} Next Vision. All rights reserved.
       </div>
     </footer>
   );

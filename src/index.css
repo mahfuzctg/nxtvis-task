@@ -72,9 +72,9 @@ h6 {
 
 p {
   font-size: 1rem;
-  line-height: 0.8;
+  line-height: 1.88;
   color: var(--text-light);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.88rem;
 }
 
 /* Links */

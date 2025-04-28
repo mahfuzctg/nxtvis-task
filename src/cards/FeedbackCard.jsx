@@ -18,20 +18,20 @@ const FeedbackCard = ({ item }) => {
       <div className="text-left flex flex-col justify-center items-center h-full">
         <h3 className="text-lg text-[#6366F1] font-bold ">{item.name}</h3>
         <p className="text-sm text-gray-500">{item.role}</p>
-        <p className="text-gray-600 text-sm mt-2 text-center px-4">
+        <p className="text-gray-600 text-sm  text-center px-4">
           {item.message}
         </p>
 
         {/* Display the star rating */}
         <div className="flex justify-center ">
           {[...Array(5)].map((_, i) => (
-            <span key={i}>
+            <p key={i}>
               {i < item.rating ? (
                 <FaStar className="text-yellow-500" />
               ) : (
                 <FaRegStar className="text-yellow-500" />
               )}
-            </span>
+            </p>
           ))}
         </div>
       </div>

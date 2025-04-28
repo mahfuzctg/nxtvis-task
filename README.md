@@ -23,6 +23,14 @@ The homepage design includes the following sections:
 
 ---
 
+## Live Demo
+
+Check out the live demo of the Car Rental API on Vercel: [Vercel Live Link](https://nxtvis.vercel.app/)
+
+## GitHub Repository
+
+Explore the source code and contribute to the project on GitHub: [GitHub Repository Link](https://github.com/mahfuzctg/nxtvis-task)
+
 ## Getting Started
 
 ### Prerequisites
@@ -44,3 +52,5 @@ To get the project up and running locally, follow these steps:
    npm install
 
    ```
+
+The README now includes the correct **Vercel live link** and **GitHub repository link** for easy access.

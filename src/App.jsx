@@ -1,6 +1,7 @@
 import { Outlet, BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/home";
+import Footer from "./shared/Footer";
 import Navbar from "./shared/Navbar";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Outlet />
       <Home />
+      <Footer />
     </Router>
   );
 }

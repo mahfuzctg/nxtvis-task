@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaQuoteRight, FaRegStar, FaStar } from "react-icons/fa";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import { feedback } from "../data/feedbackData";
+import Title from "../reuseables/Title";
 
 const FeedbackSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,15 +23,12 @@ const FeedbackSection = () => {
 
   return (
     <section className="py-16 ">
-      <div className="max-w-5xl mx-auto px-4 text-center">
-        <p className="text-[#6366F1] font-semibold tracking-wider uppercase">
-          Feedback
-        </p>
-        <h2 className="text-3xl  font-bold mt-2 leading-tight">
-          Your trusted
-          <br />
-          financial advisor
-        </h2>
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <Title
+          title="Custom Color Title"
+          subtitle="This is a custom subtitle"
+          color="blue-600"
+        />
 
         {/* Feedback */}
         <div className="flex justify-center items-center gap-8 mt-12 flex-wrap">

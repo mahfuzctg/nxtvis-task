@@ -54,3 +54,4 @@ To get the project up and running locally, follow these steps:
    ```
 
 The README now includes the correct **Vercel live link** and **GitHub repository link** for easy access.
+# food-dashboard-client
